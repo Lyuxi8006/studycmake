@@ -1,3 +1,6 @@
-cmake_minimum_required(VERSION 2.6)
-project (hello_cmake)
-add_executable(${PROJECT_NAME} main.cpp)
+PROJECT(HELLO)
+ADD_SUBDIRECTORY(src bin)
+INSTALL(FILES COPYRIGHT README DESTINATION share/doc/cmake/)
+INSTALL(PROGRAMS runhello.sh DESTINATION bin)
+INSTALL(DIRECTORY doc/ DESTINATION shar/doc/cmake)
+
